@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>gallery</title>
+		
+		<style>
+			
+			.Slide {display:none;}
+			.container{
+					background-color:black;
+					width:90%;
+					height:70%;
+					opacity:0.9;
+					color:white;
+				}
+			.pic{
+					background-color:black;
+					color:white;
+					
+					}
+			.head1{
+				font-family:cursive;
+				background-color:white;
+				opacity:0.8;
+				color:gray;
+				width:50%;
+			}
+		</style>
+	</head>
+
+	<body background="12.jpg">
+	<center>
+	<div class="head1">
+		<h1 >D.R.E.A.M.   and  P.A.S.S.I.O.N.</h1>
+		<h2 >are Oxygen Of Soul</h2>
+		<h3><a href="photography.html">MyPhotography</a></h3>
+	</div>
+		<center>
+		<div class="container">
+			<div class="pic" >
+			 <img class="Slide" src="25.jpg" style="width:80%">
+			  
+			  <img class="Slide" src="15.jpg" style="width:80%">
+			  <img class="Slide" src="16.jpg" style="width:80%">
+			  <img class="Slide" src="17.jpg" style="width:80%">
+			  <img class="Slide" src="26.jpg" style="width:80%">
+			  <img class="Slide" src="19.jpg" style="width:80%">
+			  <img class="Slide" src="20.jpg" style="width:80%">
+			  <img class="Slide" src="21.jpg" style="width:80%">
+			  <img class="Slide" src="22.jpg" style="width:80%">
+			  <img class="Slide" src="0.jpg" style="width:80%">
+			  <img class="Slide" src="36.jpg" style="width:80%">
+			  <img class="Slide" src="37.jpg" style="width:80%">
+			</div>
+		</div>
+	</center>
+
+	<script>
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+		var i;
+		var x = document.getElementsByClassName("Slide");
+		for (i = 0; i < x.length; i++) {
+		   x[i].style.display = "none";  
+		}
+		myIndex++;
+		if (myIndex > x.length) {myIndex = 1}    
+		x[myIndex-1].style.display = "block";  
+		setTimeout(carousel, 3000); // Change image every 2 seconds
+	}
+	</script>
+
+	</body>
+</html>
